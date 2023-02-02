@@ -30,6 +30,10 @@ public:
 	SDL_Texture* quittext;
 	SDL_Rect quitbutton;
 
+	SDL_Texture* EnterButton;
+	SDL_Rect EnterButtonRect;
+	bool entered;
+
 	SDL_Texture* titlescreenText;
 	SDL_Rect titlescreenTextRect;
 
@@ -41,6 +45,19 @@ public:
 	SDL_Rect table;
 	SDL_Rect LightRadio;
 	SDL_Rect Pinbox;
+
+	SDL_Texture* level1reminder;
+	SDL_Rect level1reminderRect;
+
+	SDL_Texture* levelinstructions[10];
+	SDL_Rect levelinstructionsRect[10];
+	bool instructing;
+
+	SDL_Rect timeleft;
+	SDL_Rect BarBox;
+
+	//not important just for looks
+	SDL_Rect wire;
 
 	SDL_Texture* lights[12];
 	SDL_Rect lightsRect[12];
@@ -63,6 +80,8 @@ public:
 	int lightsOn[12];
 	int combination;
 	int combination2;
+
+	int highscore[10];
 
 	void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
 
