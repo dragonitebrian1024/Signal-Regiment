@@ -11,6 +11,7 @@ int main(int argc, char* argv[])
 	int frameTime;
 
 	game = new Game();
+	srand(game->seed);
 	std::cout << "enter a number: ";
 	std::cin >> game->seed;
 	game->init("Signal Regiment", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1200, 800, false);

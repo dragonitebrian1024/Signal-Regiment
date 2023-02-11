@@ -5,6 +5,9 @@
 #include <random>
 #include <vector>
 #include <iostream>
+#include <string>
+#include <fstream>
+
 
 static SDL_Renderer* renderer;
 class Game {
@@ -37,7 +40,9 @@ public:
 	SDL_Texture* titlescreenText;
 	SDL_Rect titlescreenTextRect;
 
-	SDL_Rect Mouse;
+	SDL_Rect Mouse, Mouse2;
+
+	bool enterr;
 
 	int level;
 	int currentlevel;
@@ -48,6 +53,17 @@ public:
 
 	SDL_Texture* level1reminder;
 	SDL_Rect level1reminderRect;
+
+	SDL_Texture* level2reminder;
+	SDL_Rect level2reminderRect;
+
+	SDL_Texture* level3reminder;
+	SDL_Rect level3reminderRect;
+
+	SDL_Texture* level4reminder;
+	SDL_Rect level4reminderRect;
+
+	bool exited;
 
 	SDL_Texture* levelinstructions[10];
 	SDL_Rect levelinstructionsRect[10];
@@ -76,6 +92,15 @@ public:
 
 	SDL_Texture* level1Text;
 	SDL_Rect level1Button;
+
+	SDL_Texture* level2Text;
+	SDL_Rect level2Button;
+
+	SDL_Texture* level3Text;
+	SDL_Rect level3Button;
+
+	SDL_Texture* level4Text;
+	SDL_Rect level4Button;
 
 	int lightsOn[12];
 	int combination;
